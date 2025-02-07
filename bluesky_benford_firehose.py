@@ -68,8 +68,10 @@ def main():
     numbers_first_digit = [num[0] for num in collected_numbers if num[0] != '0']
     counter = Counter(numbers_first_digit)
     counter_items = sorted(counter.items())
-    counter_items_prop = [(item[0], item[1]/total_numbers) for item in counter_items]
-    print(counter_items_prop)
+    counter_items_prop = [(item[0], round(item[1]/total_numbers, 4)) for item in counter_items]
+    print("Total Samples: ", total_numbers, "\n")
+    for item in counter_items_prop:
+        print("Digit: ", item[0], "Proportion: ", item[1], "\n")
 
 if __name__ == "__main__":
     main()
