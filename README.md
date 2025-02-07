@@ -5,6 +5,8 @@ using the python SDK to analyze the distribution of first digits to explore [Ben
 
 I modified code from [this extremely helpful tutorial](https://jrashford.com/2024/12/11/bluesky-firehose-python-tutorial/) to accomplish this as well as some gpt-4o assistance to get the threading setup.
 
+I also used the [uv library](https://github.com/astral-sh/uv) to manage the project environment and allow others to reproduce. 
+
 ## Results
 
 Findings from one run of a 10k sample:
