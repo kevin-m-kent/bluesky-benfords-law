@@ -1,6 +1,15 @@
 ## Exploring Benford's Law in Bluesky Firehose Data
 
 As a part of my master's statistics class, I wrote a script to pull bluesky firehose posts (in realtime) 
-using the python SDK and analyze the distribution of first digits. 
+using the python SDK to analyze the distribution of first digits to explore [Benford's Law](https://en.wikipedia.org/wiki/Benford%27s_law).
 
-I modified code from [this extremely helpful tutorial](https://jrashford.com/2024/12/11/bluesky-firehose-python-tutorial/) to accomplish this.
+I modified code from [this extremely helpful tutorial](https://jrashford.com/2024/12/11/bluesky-firehose-python-tutorial/) to accomplish this as well as some gpt-4o assistance to get the threading setup.
+
+## Results
+
+Findings from one run of a 10k sample:
+
+```
+
+
+```

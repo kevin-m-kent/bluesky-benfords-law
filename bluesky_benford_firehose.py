@@ -60,18 +60,14 @@ def main():
     # Wait for the client thread to finish
     client_thread.join()
 
-    # Print the first few collected numbers and total count
-    print("First few numbers collected:", collected_numbers[:10])
-    print(f"Total numbers collected: {len(collected_numbers)}")
-
     total_numbers = len(collected_numbers)
     numbers_first_digit = [num[0] for num in collected_numbers if num[0] != '0']
     counter = Counter(numbers_first_digit)
     counter_items = sorted(counter.items())
-    counter_items_prop = [(item[0], round(item[1]/total_numbers, 4)) for item in counter_items]
-    print("Total Samples: ", total_numbers, "\n")
+    counter_items_prop = [(item[0], round(item[1]/total_numbers, 2)) for item in counter_items]
+    print("Total Samples:", total_numbers)
     for item in counter_items_prop:
-        print("Digit: ", item[0], "Proportion: ", item[1], "\n")
+        print("Digit:", item[0], "Proportion:", item[1])
 
 if __name__ == "__main__":
     main()
