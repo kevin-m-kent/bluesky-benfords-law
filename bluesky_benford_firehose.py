@@ -60,7 +60,8 @@ def main():
     # Wait for the client thread to finish
     client_thread.join()
 
-    numbers_first_digit = [num[0] for num in collected_numbers if num[0] != '0']
+    #numbers_first_digit = [num[0] for num in collected_numbers if num[0] != '0']
+    numbers_first_digit = [num[0] for num in collected_numbers]
     total_numbers = len(numbers_first_digit)
     counter = Counter(numbers_first_digit)
     counter_items = sorted(counter.items())
