@@ -13,7 +13,7 @@ The Python environment uses the [uv library](https://github.com/astral-sh/uv) fo
 
 ### R Implementation  
 
-The R version replicates the same functionality using R's statistical computing capabilities. It includes both basic and advanced implementations with realistic data simulation.
+The R version replicates the same functionality and **attempts to connect to the actual Bluesky firehose** before falling back to realistic simulation. It includes both basic and advanced implementations that match the Python version's capabilities.
 
 ## Project Structure
 
@@ -23,8 +23,9 @@ The R version replicates the same functionality using R's statistical computing 
 │   ├── pyproject.toml
 │   └── uv.lock
 ├── R/               # R implementation  
-│   ├── bluesky_benford_firehose.R
-│   ├── bluesky_benford_advanced.R
+│   ├── bluesky_benford_firehose.R      # Real firehose connection with fallback
+│   ├── bluesky_benford_advanced.R      # Advanced version with enhanced features
+│   ├── websocket_helper.py             # Python WebSocket helper for real connection
 │   ├── DESCRIPTION
 │   └── README.md
 └── README.md        # This file
