@@ -8,3 +8,10 @@ wheels/
 
 # Virtual environments
 .venv
+
+# R-generated files
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj

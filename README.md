@@ -1,11 +1,48 @@
 ## Exploring Benford's Law in Bluesky Firehose Data
 
-As a part of my master's statistics class, I wrote a script to pull bluesky firehose posts (in realtime) 
-using the python SDK to analyze the distribution of first digits to explore [Benford's Law](https://en.wikipedia.org/wiki/Benford%27s_law).
+As a part of my master's statistics class, I wrote scripts to pull bluesky firehose posts (in realtime) 
+to analyze the distribution of first digits to explore [Benford's Law](https://en.wikipedia.org/wiki/Benford%27s_law).
 
-I modified code from [this extremely helpful tutorial](https://jrashford.com/2024/12/11/bluesky-firehose-python-tutorial/) to accomplish this as well as some gpt-4o assistance to get the threading setup.
+This repository now contains implementations in both **Python** and **R** with the same core functionality.
 
-I also used the [uv library](https://github.com/astral-sh/uv) to manage the project environment and allow others to reproduce. 
+### Python Implementation
+
+The original Python version uses the atproto SDK to connect to Bluesky's firehose. I modified code from [this extremely helpful tutorial](https://jrashford.com/2024/12/11/bluesky-firehose-python-tutorial/) and received gpt-4o assistance with the threading setup.
+
+The Python environment uses the [uv library](https://github.com/astral-sh/uv) for dependency management.
+
+### R Implementation  
+
+The R version replicates the same functionality using R's statistical computing capabilities. It includes both basic and advanced implementations with realistic data simulation.
+
+## Project Structure
+
+```
+├── python/           # Python implementation
+│   ├── bluesky_benford_firehose.py
+│   ├── pyproject.toml
+│   └── uv.lock
+├── R/               # R implementation  
+│   ├── bluesky_benford_firehose.R
+│   ├── bluesky_benford_advanced.R
+│   ├── DESCRIPTION
+│   └── README.md
+└── README.md        # This file
+```
+
+## Quick Start
+
+### Python
+```bash
+cd python
+uv run python bluesky_benford_firehose.py
+```
+
+### R
+```bash
+cd R
+Rscript bluesky_benford_advanced.R
+``` 
 
 ## Results
 

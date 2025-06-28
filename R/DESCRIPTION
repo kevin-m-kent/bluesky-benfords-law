@@ -1,0 +1,22 @@
+Package: BlueskyBenfordAnalysis
+Title: Benford's Law Analysis of Bluesky Firehose Data
+Version: 0.1.0
+Author: R Implementation of Python Bluesky Benford Analysis
+Maintainer: Your Name <your.email@example.com>
+Description: This package replicates the functionality of the Python version
+    for analyzing Benford's law using Bluesky firehose data. It connects to
+    Bluesky's real-time data stream, extracts numbers from posts, and analyzes
+    the distribution of first digits according to Benford's law.
+License: MIT
+Depends: 
+    R (>= 4.0.0)
+Imports:
+    httr,
+    jsonlite,
+    stringr,
+    httpuv
+Suggests:
+    testthat
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 7.0.0
